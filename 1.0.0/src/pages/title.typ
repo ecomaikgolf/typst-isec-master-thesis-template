@@ -64,13 +64,11 @@
 	#v(5.05cm)
 	#text(size: 12pt)[*MASTER'S THESIS*]
 
-	#par[
-		to achieve the university degree of
+	to achieve the university degree of
 
-		Diplom-Ingenieur(in)
+	Diplom-Ingenieur(in)
 
-		Master's degree programme: #curriculum
-	]
+	Master's degree programme: #curriculum
 
 	#v(1.15cm)
 

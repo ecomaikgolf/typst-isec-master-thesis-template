@@ -45,14 +45,14 @@
 	// Sections
 
 	// Style of Level 1 Sections
-	#show outline.entry.where(level: 1): it => [
+	#show outline.entry.where(level: 1): it => context [
 
 		#show grid: set block(above: 0.38cm, below: 0cm)
 
 		#let loc  = it.element.location()
-		#let sec  = it.body.children.slice(0).at(0)
-		#let name = it.body.children.slice(0).at(2)
-		#let page = it.page
+		#let name = it.element.body
+		#let sec  = it.prefix()
+		#let page = it.page()
 
 		// 1. Section Name                                                        12
 		#link(loc,
@@ -82,9 +82,9 @@
 		#show grid: set block(above: -0.06cm, below: 0cm)
 
 		#let loc  = it.element.location()
-		#let sec  = it.body.children.slice(0).at(0)
-		#let name = it.body.children.slice(0).at(2)
-		#let page = it.page
+		#let name = it.element.body
+		#let sec  = it.prefix()
+		#let page = it.page()
 
 		//     1.1. Subsection Name  . . . . . . . . . . . . . . . . . . . . . . 12
 		#link(loc,
@@ -124,9 +124,9 @@
 		#show grid: set block(above: -0.06cm, below: 0cm)
 
 		#let loc  = it.element.location()
-		#let sec  = it.body.children.slice(0).at(0)
-		#let name = it.body.children.slice(0).at(2)
-		#let page = it.page
+		#let name = it.element.body
+		#let sec  = it.prefix()
+		#let page = it.page()
 
 		#link(loc,
 			grid(columns: (1.6cm, auto, 0.3cm, auto, 0.1cm, 1fr, 0.45cm, auto),
@@ -171,9 +171,9 @@
 	// Style of Level 1 Figures
 	#show outline.entry.where(level: 1): it => [
 		#let loc  = it.element.location()
-		#let sec  = it.body.children.slice(0).at(2)
-		#let cap  = it.body.children.slice(0).slice(4)
-		#let page = it.page
+		#let name = it.element.body
+		#let sec  = it.prefix()
+		#let page = it.page()
 
 		// 1.1. Figure Caption . . . . . . . . . . . . . . . . . . . . . . . . . 12
 		#link(loc,
